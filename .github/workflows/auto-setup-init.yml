@@ -1,0 +1,55 @@
+name: auto-setup-init
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+  actions: write
+  issues: write
+
+jobs:
+  auto-setup:
+    if: github.repository != 'ewjoachim/daily-writing-template'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up UV
+        id: setup-uv
+        uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
+        with:
+          enable-cache: false
+
+      - name: Look up owner's display name
+        id: owner
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          # .name is the profile display name; empty when unset, so the update
+          # script falls back to the login.
+          name="$(gh api "users/$OWNER" --jq '.name // ""')"
+          echo "name=$name" >> "$GITHUB_OUTPUT"
+
+      - name: Update site configuration
+        run: uv run --script -- .github/update-from-config --init
+        env:
+          REPO_DESCRIPTION: ${{ github.event.repository.description }}
+          REPO_AUTHOR: ${{ steps.owner.outputs.name }}
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: apply auto-setup from issue" || echo "No changes to commit"
+          git push
+
+      - name: Create label
+        run: gh label create 'auto-setup' --color 33a637 --force
+        env:
+          GH_TOKEN: ${{ github.token }}

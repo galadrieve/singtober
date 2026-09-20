@@ -1,0 +1,32 @@
+site_name = "My Daily Writing Project"
+locale = "fr-fr"
+timezone = "Europe/Paris"
+colors = ["#336699", "#669933", "#993366", "#996633", "#663399", "#339966"]
+index_colors = ["#336699", "#663399"]
+logo = "android-chrome-512x512.png"
+title_ttf_font = "Open Sans"
+body_ttf_font = "Gelasio"
+
+[[icon_links]]
+rel = "icon"
+type = "image/png"
+sizes = "32x32"
+href = "favicon-32x32.png"
+
+[[icon_links]]
+rel = "icon"
+type = "image/png"
+sizes = "16x16"
+href = "favicon-16x16.png"
+
+[[icon_links]]
+rel = "apple-touch-icon"
+sizes = "180x180"
+href = "apple-touch-icon.png"
+
+[[icon_links]]
+rel = "manifest"
+href = "site.webmanifest"
+
+[cms_config.backend]
+name = "github"

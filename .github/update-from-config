@@ -1,0 +1,598 @@
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.14"
+# dependencies = [
+#   "markdown-it-py",
+#   "mdformat",
+#   "mdformat-gfm-alerts",
+#   "ruamel.yaml",
+#   "tomlkit",
+# ]
+# ///
+"""
+Update various project files based on the config. This is a bit of magic that aims
+at having as much as possible configurable in the CMS.
+"""
+
+import argparse
+import contextlib
+import dataclasses
+import datetime
+import functools
+import io
+import logging
+import os
+import pathlib
+import subprocess
+import urllib.parse
+import zoneinfo
+from typing import Any, Protocol, Self
+
+import markdown_it
+import mdformat_gfm_alerts.plugin as alerts_plugin
+import tomlkit
+from markdown_it.tree import SyntaxTreeNode
+from mdformat.renderer import MDRenderer
+from ruamel.yaml import YAML
+
+workspace = pathlib.Path(__file__).parents[1]
+
+logger = logging.getLogger()
+
+
+@dataclasses.dataclass
+class Config:
+    site_name: str | None
+    description: str | None
+    timezone: str | None
+    copyright: str | None
+
+    @classmethod
+    def from_dict(cls, config_dict: dict[str, Any]) -> Self:
+
+        return cls(
+            site_name=config_dict.get("site_name"),
+            description=config_dict.get("description"),
+            timezone=config_dict.get("timezone"),
+            copyright=config_dict.get("copyright"),
+        )
+
+
+@dataclasses.dataclass
+class Repository:
+    owner: str
+    name: str
+
+    @classmethod
+    def from_full_name(cls, full_name: str) -> Self:
+        owner, name = full_name.split("/", 1)
+        return cls(owner=owner, name=name)
+
+    @property
+    def full_name(self):
+        return f"{self.owner}/{self.name}"
+
+
+def get_raw_content(node: SyntaxTreeNode) -> str:
+    return "".join(
+        getattr(n, "content", "") for n in node.walk() if not n.type == "inline"
+    )
+
+
+class Transformer(Protocol):
+    def __call__(self, *, root: SyntaxTreeNode) -> None: ...
+
+
+class TextTransformer(Protocol):
+    def __call__(self, *, text: str) -> str: ...
+
+
+@functools.cache
+def get_md_parser() -> markdown_it.MarkdownIt:
+    parser = markdown_it.MarkdownIt("commonmark")
+    alerts_plugin.update_mdit(parser)
+    return parser
+
+
+@contextlib.contextmanager
+def _round_trip(path: pathlib.Path, load, dump):
+    original = path.read_text()
+
+    # Deliberately no try/finally: when a mutation raises, the file keeps its last
+    # good state rather than persisting a half-applied change.
+    yield (data := load(original))
+
+    if (updated := dump(data)) != original:
+        path.write_text(updated)
+
+
+def toml_file(path: pathlib.Path):
+    """Yield the parsed document; mutate it in place, it is written back on exit."""
+    return _round_trip(path, tomlkit.parse, tomlkit.dumps)
+
+
+def yaml_file(path: pathlib.Path):
+    """Same, for YAML. The wide `width` keeps long values (the hook's `files`
+    regex, the issue form's labels) on one line instead of being re-wrapped."""
+    yaml = YAML()
+    yaml.preserve_quotes = True
+    yaml.indent(mapping=2, sequence=4, offset=2)
+    yaml.width = 4096
+
+    def dump(data) -> str:
+        stream = io.StringIO()
+        yaml.dump(data, stream)
+        return stream.getvalue()
+
+    return _round_trip(path, yaml.load, dump)
+
+
+def update_text_file(path: pathlib.Path, transformers: list[TextTransformer]):
+    """Text is replaced rather than mutated, so transformers return the new value
+    instead of editing one in place."""
+    original = text = path.read_text()
+
+    for transformer in transformers:
+        text = transformer(text=text)
+
+    if text != original:
+        path.write_text(text)
+
+
+def update_readme(
+    workspace: pathlib.Path,
+    transformers: list[Transformer],
+):
+    # Parse
+    readme_path = workspace / "README.md"
+    original = readme_path.read_text()
+
+    root = SyntaxTreeNode(get_md_parser().parse(original))
+
+    for transformer in transformers:
+        transformer(root=root)
+
+    # Round-trip
+    options = dict(get_md_parser().options)
+    options.setdefault("parser_extension", []).append(alerts_plugin)
+    result = MDRenderer().render(root.to_tokens(), options=options, env={})
+    if result != original:
+        readme_path.write_text(result)
+
+
+def replace_marker_block(text: str, name: str, content: str) -> str:
+    """Replace what sits between `<!-- BEGIN name -->` and `<!-- END name -->`.
+
+    Partitioning twice rather than indexing means END is always looked for after
+    START, so reordered or duplicated markers can't splice the file inside out.
+    """
+    start_marker, end_marker = f"<!-- BEGIN {name} -->", f"<!-- END {name} -->"
+
+    before, found_start, rest = text.partition(start_marker)
+    _, found_end, after = rest.partition(end_marker)
+    if not found_start or not found_end:
+        logger.info(f"USER_MANUAL.md: {name} markers not found, skipping.")
+        return text
+
+    updated = f"{before}{start_marker}\n{content}\n{end_marker}{after}"
+    if updated == text:
+        logger.info(f"USER_MANUAL.md: {name} block already correct, skipping.")
+    else:
+        logger.info(f"USER_MANUAL.md: Updated {name} block.")
+    return updated
+
+
+PLACEHOLDER_TITLE = "Your Daily Writing Project"
+
+
+def replace_placeholder_title(*, root: SyntaxTreeNode, config: Config):
+
+    if not config.site_name:
+        logger.info(
+            "README.md: Title not found in config.",
+        )
+        return
+
+    new_title_node = SyntaxTreeNode(get_md_parser().parse(config.site_name)).children[0]
+    new_title_content = get_raw_content(new_title_node)
+
+    # Mutate
+    for node in root.children:
+        # h1
+        if node.type != "heading" or node.tag[1:] != "1":
+            continue
+
+        current_title_content = get_raw_content(node)
+        if current_title_content != PLACEHOLDER_TITLE:
+            logger.info("README.md: Title is no longer the placeholder, skipping")
+            return
+
+        node.children = new_title_node.children
+        logger.info(
+            f"README.md: Replacing placeholder title with '{new_title_content}'",
+        )
+
+        return
+
+
+def update_admonition(root: SyntaxTreeNode):
+
+    # Setup is complete once the issue form is gone.
+    if (workspace / ".github/ISSUE_TEMPLATE/auto-setup.yml").exists():
+        return
+
+    for node in root.children:
+        if node.type == "gfm_alert" and node.meta["title"] == "IMPORTANT":
+            root.children.remove(node)
+            logger.info("README.md: Removing auto-setup admonition")
+            return
+
+
+def update_admonition_init(root: SyntaxTreeNode):
+    content = """[**Click here to configure your project**](../../issues/new?template=auto-setup.yml&title=Auto-setup)"""
+    for node in root.children:
+        if node.type == "gfm_alert" and node.meta["title"] == "IMPORTANT":
+            node.children = SyntaxTreeNode(get_md_parser().parse(content)).children
+
+            return
+
+
+def title_from_repository_name(name: str) -> str:
+    return name.replace("-", " ").replace("_", " ").title()
+
+
+def update_issue_form(
+    *,
+    data,
+    repository: Repository | None,
+    description: str | None,
+    author: str | None,
+):
+    if repository:
+        site_name = title_from_repository_name(repository.name)
+        for field in data.get("body", []):
+            if field.get("id") == "site_name":
+                field.setdefault("attributes", {})["value"] = site_name
+                logger.info(f"auto-setup.yml: Set default site name to '{site_name}'.")
+                break
+
+        author_name = author or repository.owner
+        for field in data.get("body", []):
+            if field.get("id") == "author":
+                field.setdefault("attributes", {})["value"] = author_name
+                logger.info(f"auto-setup.yml: Set default author to '{author_name}'.")
+                break
+
+    if description:
+        for field in data.get("body", []):
+            if field.get("id") == "description":
+                field.setdefault("attributes", {})["value"] = description
+                logger.info("auto-setup.yml: Set default description value.")
+                break
+
+
+def add_description(root: SyntaxTreeNode, config: Config):
+    if not config.description:
+        logger.info(
+            "README.md: Description not found in config. Not replacing content."
+        )
+        return
+    if any(node.type == "paragraph" for node in root.children):
+        logger.info("README.md: Non-empty content. Not replacing it.")
+        return
+
+    description_node = SyntaxTreeNode(get_md_parser().parse(config.description))
+    root.children.extend(description_node.children)
+    logger.info("README.md: Empty content, adding non-empty description content")
+
+
+def update_cron(*, text: str, workspace: pathlib.Path, config: Config) -> str:
+    # The publish schedule has to be a literal cron in publish.yml, and GitHub
+    # forbids automation from writing workflow files. So rather than editing the
+    # workflow, we keep the exact value the user must paste in up to date here in
+    # the manual — a plain file the hook is allowed to write and push.
+    if not config.timezone:
+        logger.info("USER_MANUAL.md: Timezone not found in config.")
+        return text
+
+    timezone = zoneinfo.ZoneInfo(config.timezone)
+
+    # Find UTC offsets (January and July) to cover both sides of DST.
+    offsets: set[datetime.timedelta] = set()
+    for month in (1, 7):
+        local = datetime.datetime(
+            year=datetime.datetime.now().year,
+            month=month,
+            day=1,
+            tzinfo=timezone,
+        )
+        offset = local.utcoffset()
+        assert offset is not None
+        offsets.add(offset)
+
+    # One cron per offset, one minute past local midnight expressed in UTC.
+    crons: list[str] = []
+    for offset in offsets:
+        minutes = int((datetime.timedelta(seconds=60) - offset).total_seconds()) // 60
+        hours = (minutes // 60) % 24
+        minutes = minutes % 60
+        crons.append(f"{minutes} {hours} * * *")
+
+    cron_lines = "\n".join(f"  - cron: '{cron}'" for cron in sorted(crons))
+
+    # State whether publish.yml already carries this schedule. A mismatch isn't
+    # necessarily wrong — the user may have customised it on purpose — so we only
+    # report the fact rather than flag it as an error.
+    publish_path = workspace / ".github" / "workflows" / "publish.yml"
+    publish_data = YAML().load(publish_path.read_text())
+    # `on` is the YAML 1.1 boolean gotcha: it can come back as the key True.
+    on_section = publish_data.get("on", publish_data.get(True)) or {}
+    current_crons = [s.get("cron") for s in on_section.get("schedule", [])]
+    if set(current_crons) == set(crons):
+        status = "✅ Your `publish.yml` currently matches this schedule."
+    else:
+        status = (
+            "ℹ️ Your `publish.yml` currently uses a different schedule than this "
+            "one (which is fine if you changed it on purpose)."
+        )
+
+    content = (
+        f"{status}\n"
+        "\n"
+        "```yaml\n"
+        f"  # Based on the timezone of this project: {config.timezone}\n"
+        "  schedule:\n"
+        f"{cron_lines}\n"
+        "```"
+    )
+
+    return replace_marker_block(text, "cron", content)
+
+
+def pages_enabled(repo: str) -> bool | None:
+    # None means "couldn't tell": gh is missing, unauthenticated, or offline — in
+    # which case the caller leaves the manual untouched rather than assert a wrong
+    # state. Only a definitive 404 is read as "not enabled".
+    try:
+        result = subprocess.run(
+            ["gh", "api", f"repos/{repo}/pages"],
+            capture_output=True,
+            text=True,
+        )
+    except FileNotFoundError:
+        return None
+    if result.returncode == 0:
+        return True
+    if "(HTTP 404)" in result.stderr:
+        return False
+    return None
+
+
+def update_pages_status(*, text: str, repo: str | None) -> str:
+    if not repo:
+        return text
+    enabled = pages_enabled(repo)
+    if enabled is None:
+        logger.info("USER_MANUAL.md: Could not check Pages, leaving status as-is.")
+        return text
+
+    if enabled:
+        status = "✅ GitHub Pages is enabled — your site will deploy."
+    else:
+        status = (
+            "⚠️ GitHub Pages is not enabled yet, so your site won't deploy. Turn it "
+            "on in [Pages settings](../../settings/pages) by setting the source to "
+            "**GitHub Actions**."
+        )
+
+    return replace_marker_block(text, "pages", status)
+
+
+def update_license(workspace: pathlib.Path, config: Config):
+    if not config.copyright:
+        logger.info(
+            "LICENSE: Copyright not found in config.",
+        )
+        return
+
+    license_path = workspace / "LICENSE"
+    if license_path.exists():
+        logger.info(
+            "LICENSE: file already exists, skipping.",
+        )
+        return
+
+    license_path.write_text(config.copyright.strip() + "\n")
+    logger.info(
+        "LICENSE: Wrote file",
+    )
+
+
+def github_pages_url(repository: Repository) -> str:
+    host = f"{repository.owner}.github.io"
+    # A <user>.github.io repo is served at the domain root; project sites live
+    # under a /<repo-name> path.
+    if repository.name.lower() == host.lower():
+        return f"https://{host}"
+    return f"https://{host}/{repository.name}"
+
+
+def update_user_manual(*, text: str, repository: Repository | None) -> str:
+    if repository is None:
+        return text
+
+    placeholders = {
+        "{github_pages_url}": github_pages_url(repository),
+        "{github-username}": repository.owner,
+        "{github-repository-name}": repository.name,
+    }
+    if not any(placeholder in text for placeholder in placeholders):
+        logger.info(
+            "USER_MANUAL.md: Placeholders not found, skipping",
+        )
+        return text
+
+    for placeholder, value in placeholders.items():
+        text = text.replace(placeholder, value)
+    logger.info("USER_MANUAL.md: Replaced placeholders")
+    return text
+
+
+def update_cms_config(*, document, repository: Repository):
+    try:
+        backend = document["cms_config"]["backend"]
+    except KeyError:
+        backend = None
+    else:
+        if "repo" in backend:
+            logger.info("daily-writing.toml: CMS backend repo already set, skipping.")
+            return
+
+    cms_config = document.get("cms_config")
+    if cms_config is None:
+        cms_config = tomlkit.table(is_super_table=True)
+        document["cms_config"] = cms_config
+
+    if backend is None:
+        cms_config["backend"] = backend = tomlkit.table()
+
+    backend.update({"name": "github", "repo": repository.full_name})
+
+    logger.info(
+        f"daily-writing.toml: Set CMS backend repo to '{repository.full_name}'."
+    )
+
+
+def update_repository_url(*, document, repository: Repository | None):
+    # daily-writing is forge-agnostic and reads repository_url straight from the
+    # config, so producing the GitHub-shaped value is this template's job. Written
+    # only when unset: someone pointing it at a mirror must not be overruled. Runs
+    # outside --init too, to backfill repos generated before this existed.
+    if repository is None:
+        return
+
+    if document.get("repository_url"):
+        logger.info("daily-writing.toml: repository_url already set, skipping.")
+        return
+
+    # GITHUB_SERVER_URL keeps this correct on GitHub Enterprise Server.
+    server_url = os.environ.get("GITHUB_SERVER_URL") or "https://github.com"
+    url = f"{server_url}/{repository.full_name}"
+
+    document["repository_url"] = url
+    logger.info(f"daily-writing.toml: Set repository_url to '{url}'.")
+
+
+def add_update_from_config_hook(*, data):
+    local = next(
+        (repo for repo in data.get("repos", []) if repo.get("repo") == "local"), None
+    )
+    if local is None:
+        logger.info(".pre-commit-config.yaml: No local repo found, skipping.")
+        return
+
+    hooks = local.setdefault("hooks", [])
+    if any(hook.get("id") == "update-from-config" for hook in hooks):
+        logger.info(".pre-commit-config.yaml: Hook already present, skipping.")
+        return
+
+    hooks.append({
+        "id": "update-from-config",
+        "name": "Update repo from configuration",
+        "entry": ".github/update-from-config",
+        "files": r"^(daily-writing\.toml|README\.md|USER_MANUAL\.md|LICENSE)$",
+        "language": "script",
+        "pass_filenames": False,
+    })
+    logger.info(".pre-commit-config.yaml: Added update-from-config hook.")
+
+
+@dataclasses.dataclass
+class Args:
+    init: bool
+    repository: str | None
+
+
+def get_default_repository():
+    if "GITHUB_REPOSITORY" in os.environ:
+        return os.environ["GITHUB_REPOSITORY"]
+
+    try:
+        origin = subprocess.check_output(
+            ["git", "remote", "get-url", "origin"], text=True
+        )
+    except subprocess.SubprocessError:
+        pass
+    else:
+        return urllib.parse.urlparse(origin).path.lstrip("/").removesuffix(".git")
+    return None
+
+
+def main():
+    logging.basicConfig(format="%(levelname)s: %(message)s", level="INFO")
+    parser = argparse.ArgumentParser("update-from-config")
+    parser.add_argument("--init", default=False, action="store_true")
+    parser.add_argument(
+        "--repository", default=get_default_repository(), action="store"
+    )
+
+    args = Args(**vars(parser.parse_args()))
+
+    if args.repository == "ewjoachim/daily-writing-template":
+        logger.info("Pre-fork template, skipping")
+        return
+
+    workspace = pathlib.Path(__file__).parents[1]
+    config_path = workspace / "daily-writing.toml"
+    config = Config.from_dict(tomlkit.parse(config_path.read_text()))
+    repository = Repository.from_full_name(args.repository) if args.repository else None
+
+    readme_transformers: list[Transformer]
+    manual_transformers: list[TextTransformer]
+    if args.init:
+        readme_transformers = [update_admonition_init]
+        manual_transformers = [
+            functools.partial(update_user_manual, repository=repository)
+        ]
+    else:
+        readme_transformers = [
+            functools.partial(replace_placeholder_title, config=config),
+            update_admonition,
+            functools.partial(add_description, config=config),
+        ]
+        manual_transformers = [
+            functools.partial(update_cron, workspace=workspace, config=config),
+            functools.partial(update_pages_status, repo=args.repository),
+        ]
+
+    update_readme(workspace=workspace, transformers=readme_transformers)
+    update_text_file(workspace / "USER_MANUAL.md", manual_transformers)
+
+    with toml_file(config_path) as document:
+        # Runs on both paths: --init sets it up for new projects, and the regular
+        # hook backfills projects generated before daily-writing stopped inferring it.
+        update_repository_url(document=document, repository=repository)
+        if args.init and repository:
+            update_cms_config(document=document, repository=repository)
+
+    if args.init:
+        with yaml_file(workspace / ".pre-commit-config.yaml") as data:
+            add_update_from_config_hook(data=data)
+
+        form_path = workspace / ".github" / "ISSUE_TEMPLATE" / "auto-setup.yml"
+        if form_path.exists():
+            with yaml_file(form_path) as data:
+                update_issue_form(
+                    data=data,
+                    repository=repository,
+                    description=os.environ.get("REPO_DESCRIPTION") or None,
+                    author=os.environ.get("REPO_AUTHOR") or None,
+                )
+        else:
+            logger.info("auto-setup.yml: Issue form not found, skipping.")
+    else:
+        update_license(workspace=workspace, config=config)
+
+
+if __name__ == "__main__":
+    main()

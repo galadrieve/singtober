@@ -1,0 +1,120 @@
+name: auto-setup
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  actions: write
+  issues: write
+
+jobs:
+  auto-setup:
+    if: contains(join(github.event.issue.labels.*.name, ','), 'auto-setup')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+
+      - name: Parse issue body
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          npm install --no-save --prefix "$RUNNER_TEMP/issue-parser" @github/issue-parser
+          cd "$RUNNER_TEMP/issue-parser"
+          node --input-type=module - <<'EOF'
+          import { parseIssue } from '@github/issue-parser';
+          import fs from 'node:fs';
+          import path from 'node:path';
+
+          const issueBody = process.env.ISSUE_BODY ?? '';
+          const templatePath = path.join(process.env.GITHUB_WORKSPACE, '.github', 'ISSUE_TEMPLATE', 'auto-setup.yml');
+          const template = fs.readFileSync(templatePath, 'utf8');
+          const parsed = parseIssue(issueBody, template);
+
+          fs.appendFileSync(process.env.GITHUB_ENV, `ISSUE_VALUES=${JSON.stringify(parsed ?? {})}\n`);
+          EOF
+
+      - name: Set up UV
+        id: setup-uv
+        uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
+        with:
+          enable-cache: false
+
+      - name: Update site configuration
+        shell: uv run --with=tomlkit python {0}
+        run: |
+          import json
+          import os
+          import pathlib
+
+          import tomlkit
+
+          workspace = pathlib.Path()
+          config_path = workspace / 'daily-writing.toml'
+          document = tomlkit.parse(config_path.read_text())
+          issue_values = json.loads(os.environ['ISSUE_VALUES'])
+          # Only these map to config; other form fields (e.g. the "Got it"
+          # acknowledgement) must not leak into daily-writing.toml.
+          config_keys = {'site_name', 'description', 'author', 'copyright', 'timezone'}
+          # Dropdown answers arrive as lists (the parser supports multi-select);
+          # ours are single-select, we need to unwrap.
+          issue_values = {
+              key: value[0] if isinstance(value, list) and len(value) == 1 else value
+              for key, value in issue_values.items()
+              if key in config_keys
+          }
+          document.update(issue_values)
+
+          config_path.write_text(tomlkit.dumps(document))
+
+      - name: Cleanup issue template
+        run: rm .github/ISSUE_TEMPLATE/auto-setup.yml
+
+      - name: Disable setup workflows
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # GITHUB_TOKEN may not push changes to .github/workflows files, so we
+          # can't delete these; disable them through the Actions API instead.
+          gh workflow disable auto-setup.yml
+          gh workflow disable auto-setup-init.yml
+
+      - name: Run prek
+        run: uvx prek run --show-diff-on-failure --all-files || true
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Same restriction: exclude .github/workflows so prek's reformatting of
+          # a workflow file can't sneak into the commit and get the push rejected.
+          git add -A -- . ':!.github/workflows'
+          git commit -m "chore: apply auto-setup from issue" || echo "No changes to commit"
+          git push
+
+      - name: Comment on issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body-file - <<EOF
+          Almost there! Follow the steps below to continue the setup.
+
+          - [x] ✅ Submit the Auto-setup issue (this issue)
+          - [ ] 📄 Enable GitHub Pages publishing: open [Pages settings]($REPO_URL/settings/pages) and set the source to **GitHub Actions**
+          - [ ] 🤖 Activate autofix: [install the autofix.ci app](https://github.com/apps/autofix-ci/installations/new) and grant it access to this repo (it commits your automated updates back for you)
+          - [ ] ✍️ Make a change to trigger the machinery — for example, update [README.md]($REPO_URL/edit/main/README.md), which powers your website's homepage
+          - [ ] ⏰ Wait for a minute and [check your website]($SITE_URL)
+          - [ ] ⚙️ Head to the [Admin](${SITE_URL}/admin), edit your website settings and add new writings
+          - [ ] 🎉 You're good to go
+
+          For everything else, see the [user manual]($REPO_URL/blob/main/USER_MANUAL.md#user-manual).
+          EOF

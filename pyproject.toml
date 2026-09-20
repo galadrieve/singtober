@@ -1,0 +1,12 @@
+[project]
+name = "daily-writing-project"
+version = "0.1.0"
+dependencies = ["daily-writing>=2026.7.6"]
+requires-python = ">=3.14"
+
+[dependency-groups]
+lint = ["flowmark>=0.8.0"]
+local = ["daily-writing[server]"]
+
+[tool.uv]
+package = false

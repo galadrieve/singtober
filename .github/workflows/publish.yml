@@ -1,0 +1,68 @@
+name: Deploy
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+  schedule:
+  - cron: 1 22 * * *
+  - cron: 1 23 * * *
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.repository != 'ewjoachim/daily-writing-template'
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1   # v7.0.1
+
+    - name: Setup Pages
+      id: pages
+      uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
+    - name: Set up UV
+      id: setup-uv
+      uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
+      with:
+        enable-cache: false
+
+    - name: Run prek
+      uses: j178/prek-action@4e14d07f9231acabce116ccfca13b13dd9755ece   # v3.0.0
+
+    - name: Build website
+      env:
+        # Deliberately not base_url: that output reports http:// for external domains
+        # for which DNS doesn't point to GitHub (e.g. Cloudflare). Instead, we rebuild
+        # the full URL from host + base_path and hardcode https. If you serve with
+        # plain http, either drop the `s` or switch to:
+        # DAILY_WRITING_SITE_URL: ${{ steps.pages.outputs.base_url }}
+        DAILY_WRITING_SITE_URL: ${{ format('https://{0}{1}', steps.pages.outputs.host, steps.pages.outputs.base_path) }}
+      run: uv run daily-writing build
+
+    - name: Upload artifact
+      uses:
+        actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b       # v4.0.0
+      if: github.event_name != 'pull_request'
+      with:
+        path: _build
+
+  # Deployment job
+  deploy:
+    if: github.event_name != 'pull_request'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346   # v5.0.1
