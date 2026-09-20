@@ -11,7 +11,7 @@ This repository is the home of a writing project, powered by
 
 - In [Pages settings](../../settings/pages), under Source, use GitHub Action. (It's always a good idea to ensure HTTPS is checked).
 - You may need to commit for this to take effect, so maybe take this opportunity to update the content of this [README](../../edit/main/README.md) which powers the homepage of your site
-- A few seconds after committing, your website should be deployed at {github_pages_url} and at your custom domain if you have configured one.
+- A few seconds after committing, your website should be deployed at https://galadrieve.github.io/singtober and at your custom domain if you have configured one.
 
 ### How to use a custom domain
 
@@ -50,7 +50,7 @@ Please refer to the [`daily-writing` doc](https://github.com/ewjoachim/daily-wri
 
 ### Using the web interface
 
-Once your website is deployed, head to {github_pages_url}/admin, log in using a token as
+Once your website is deployed, head to https://galadrieve.github.io/singtober/admin, log in using a token as
 instructed, then edit your website's settings, and add writings. While optional, you can
 improve the authentication setup if you want, see the [`daily-writing` doc](https://github.com/ewjoachim/daily-writing#online-with-sveltia)
 

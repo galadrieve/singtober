@@ -18,6 +18,7 @@ body:
       label: Site name
       description: The name shown on the homepage and in the site metadata.
       placeholder: My Daily Writing Project
+      value: Singtober
     validations:
       required: true
 
@@ -30,6 +31,7 @@ body:
         Will also be used as the initial placeholder content for
         your homepage, but you can change it later.
       placeholder: A simple writing journal for writever.
+      value: Daily writing adapted to daily singing
     validations:
       required: false
 
@@ -39,6 +41,7 @@ body:
       label: Author name
       description: Your name, used in the footer and feed metadata.
       placeholder: Your Name
+      value: galadrieve
     validations:
       required: false
 
@@ -508,9 +511,7 @@ body:
   - type: checkboxes
     id: acknowledge
     attributes:
-      label:
-        After submitting this form you'll be taken to a new issue. Wait a few
-        seconds, reload, and follow the instructions in the comment below.
+      label: After submitting this form you'll be taken to a new issue. Wait a few seconds, reload, and follow the instructions in the comment below.
       options:
         - label: Got it
           required: false

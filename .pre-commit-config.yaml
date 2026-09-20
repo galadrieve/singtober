@@ -3,13 +3,11 @@ repos:
     hooks:
       # File names
       - id: check-case-conflict # File formats
-      - id:
-          check-toml
+      - id: check-toml
           # Executables
           # Git shenanigans
       - id: check-merge-conflict
-      - id:
-          check-added-large-files
+      - id: check-added-large-files
           # Python issues
           # Whitespace
       - id: end-of-file-fixer
@@ -34,3 +32,9 @@ repos:
       # The update-from-config hook isn't shipped in the template; it is added
       # by `update-from-config --init` so it can't run against a repo that init
       # hasn't configured yet.
+      - id: update-from-config
+        name: Update repo from configuration
+        entry: .github/update-from-config
+        files: ^(daily-writing\.toml|README\.md|USER_MANUAL\.md|LICENSE)$
+        language: script
+        pass_filenames: false

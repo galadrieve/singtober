@@ -6,6 +6,7 @@ index_colors = ["#336699", "#663399"]
 logo = "android-chrome-512x512.png"
 title_ttf_font = "Open Sans"
 body_ttf_font = "Gelasio"
+repository_url = "https://github.com/galadrieve/singtober"
 
 [[icon_links]]
 rel = "icon"
@@ -30,3 +31,4 @@ href = "site.webmanifest"
 
 [cms_config.backend]
 name = "github"
+repo = "galadrieve/singtober"
