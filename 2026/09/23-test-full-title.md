@@ -5,6 +5,7 @@ date: 2026-01-01
 prompts:
   - title: test prompt title
     original_prompt: test oriprmp
+    date: 2026-01-01
 ---
 
 Test body
