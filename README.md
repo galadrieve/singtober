@@ -1,3 +1,3 @@
 # Singtober
 
-Daily writing adapted to daily singing
+Un truc pour poster des trucs
