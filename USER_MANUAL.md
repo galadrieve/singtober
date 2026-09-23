@@ -6,7 +6,7 @@ This repository is the home of a writing project, powered by
 ## How to deploy
 
 <!-- BEGIN pages -->
-⚠️ GitHub Pages is not enabled yet, so your site won't deploy. Turn it on in [Pages settings](../../settings/pages) by setting the source to **GitHub Actions**.
+✅ GitHub Pages is enabled — your site will deploy.
 <!-- END pages -->
 
 - In [Pages settings](../../settings/pages), under Source, use GitHub Action. (It's always a good idea to ensure HTTPS is checked).
