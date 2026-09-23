@@ -1,9 +1,10 @@
 ---
-date: 2026-10-01
 full_title: 01 - Pomme
+date: 2026-01-01
 prompts:
-- date: 2026-10-01
-  original_prompt: Apple
-  title: Pomme
+  - title: Pomme
+    original_prompt: Apple
+    date: 2026-01-01
 ---
+
 # 01 - Pomme
