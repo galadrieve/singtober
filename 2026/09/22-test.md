@@ -9,14 +9,10 @@ prompts:
 
 # 22 - Test
 
-<div align="center">
-
-<img src="/singtober/static/20260922.png" alt="Test" width="400">
+<p align="center"><img src="/singtober/static/20260922.png" alt="Test" width="200"></p>
 
 **Titre :**
 
 **Interprète original :**
 
 <audio controls src="/singtober/static/20260922.mp3"></audio>
-
-</div>
