@@ -1,3 +1,3 @@
 # Singtober
 
-Un truc pour poster des trucs
+Le Inktober des chanteur.euses
