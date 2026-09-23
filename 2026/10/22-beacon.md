@@ -8,3 +8,11 @@ prompts:
   title: Balise
 ---
 # 22 - Balise
+
+<p align="center"><img src="/singtober/static/20261022.jpg" alt="Balise" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261022.mp3"></audio>

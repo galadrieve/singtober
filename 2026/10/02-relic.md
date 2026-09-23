@@ -8,3 +8,11 @@ prompts:
   title: Relique
 ---
 # 02 - Relique
+
+<p align="center"><img src="/singtober/static/20261002.jpg" alt="Relique" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261002.mp3"></audio>

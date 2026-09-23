@@ -8,3 +8,11 @@ prompts:
   title: Bélier
 ---
 # 09 - Bélier
+
+<p align="center"><img src="/singtober/static/20261009.jpg" alt="Bélier" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261009.mp3"></audio>

@@ -8,3 +8,11 @@ prompts:
   title: Bidule
 ---
 # 17 - Bidule
+
+<p align="center"><img src="/singtober/static/20261017.jpg" alt="Bidule" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261017.mp3"></audio>

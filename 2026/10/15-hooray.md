@@ -8,3 +8,11 @@ prompts:
   title: Hourra
 ---
 # 15 - Hourra
+
+<p align="center"><img src="/singtober/static/20261015.jpg" alt="Hourra" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261015.mp3"></audio>

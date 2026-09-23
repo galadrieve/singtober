@@ -8,3 +8,11 @@ prompts:
   title: Confus
 ---
 # 19 - Confus
+
+<p align="center"><img src="/singtober/static/20261019.jpg" alt="Confus" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261019.mp3"></audio>

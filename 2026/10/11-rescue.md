@@ -8,3 +8,11 @@ prompts:
   title: Sauvetage
 ---
 # 11 - Sauvetage
+
+<p align="center"><img src="/singtober/static/20261011.jpg" alt="Sauvetage" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261011.mp3"></audio>

@@ -8,3 +8,11 @@ prompts:
   title: Lancer
 ---
 # 12 - Lancer
+
+<p align="center"><img src="/singtober/static/20261012.jpg" alt="Lancer" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261012.mp3"></audio>

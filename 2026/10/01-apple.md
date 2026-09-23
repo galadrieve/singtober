@@ -9,3 +9,11 @@ prompts:
 ---
 
 # 01 - Pomme
+
+<p align="center"><img src="/singtober/static/20261001.jpg" alt="Pomme" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261001.mp3"></audio>

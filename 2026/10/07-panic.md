@@ -8,3 +8,11 @@ prompts:
   title: Panique
 ---
 # 07 - Panique
+
+<p align="center"><img src="/singtober/static/20261007.jpg" alt="Panique" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261007.mp3"></audio>

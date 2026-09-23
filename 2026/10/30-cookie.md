@@ -8,3 +8,11 @@ prompts:
   title: Cookie
 ---
 # 30 - Cookie
+
+<p align="center"><img src="/singtober/static/20261030.jpg" alt="Cookie" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261030.mp3"></audio>

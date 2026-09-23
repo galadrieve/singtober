@@ -8,3 +8,11 @@ prompts:
   title: Héros
 ---
 # 21 - Héros
+
+<p align="center"><img src="/singtober/static/20261021.jpg" alt="Héros" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261021.mp3"></audio>

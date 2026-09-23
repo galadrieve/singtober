@@ -8,3 +8,11 @@ prompts:
   title: Miniature
 ---
 # 03 - Miniature
+
+<p align="center"><img src="/singtober/static/20261003.jpg" alt="Miniature" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261003.mp3"></audio>

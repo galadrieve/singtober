@@ -8,3 +8,11 @@ prompts:
   title: Cuire
 ---
 # 24 - Cuire
+
+<p align="center"><img src="/singtober/static/20261024.jpg" alt="Cuire" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261024.mp3"></audio>

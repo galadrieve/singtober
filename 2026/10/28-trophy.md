@@ -8,3 +8,11 @@ prompts:
   title: Trophée
 ---
 # 28 - Trophée
+
+<p align="center"><img src="/singtober/static/20261028.jpg" alt="Trophée" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261028.mp3"></audio>

@@ -8,3 +8,11 @@ prompts:
   title: Ogre
 ---
 # 06 - Ogre
+
+<p align="center"><img src="/singtober/static/20261006.jpg" alt="Ogre" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261006.mp3"></audio>

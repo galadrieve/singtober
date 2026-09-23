@@ -8,3 +8,11 @@ prompts:
   title: Fracture
 ---
 # 25 - Fracture
+
+<p align="center"><img src="/singtober/static/20261025.jpg" alt="Fracture" width="400"></p>
+
+**Titre :**
+
+**Interprète original :**
+
+<audio controls src="/singtober/static/20261025.mp3"></audio>
