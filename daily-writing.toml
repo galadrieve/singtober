@@ -1,4 +1,4 @@
-site_name = "My Daily Writing Project"
+site_name = "Singtober"
 locale = "fr-fr"
 timezone = "Europe/Paris"
 colors = ["#336699", "#669933", "#993366", "#996633", "#663399", "#339966"]
@@ -7,6 +7,9 @@ logo = "android-chrome-512x512.png"
 title_ttf_font = "Open Sans"
 body_ttf_font = "Gelasio"
 repository_url = "https://github.com/galadrieve/singtober"
+description = "Daily writing adapted to daily singing"
+author = "galadrieve"
+copyright = "CC BY-NC-SA"
 
 [[icon_links]]
 rel = "icon"

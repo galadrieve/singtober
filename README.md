@@ -1,4 +1,3 @@
-# Your Daily Writing Project
+# Singtober
 
-> [!IMPORTANT]
-> [**Click here to configure your project**](../../issues/new?template=auto-setup.yml&title=Auto-setup)
+Daily writing adapted to daily singing
