@@ -1,5 +1,6 @@
 ---
 full_title: 01 - Pomme
+is_draft: true
 date: 2026-10-01
 prompts:
   - title: Pomme

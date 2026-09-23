@@ -1,6 +1,7 @@
 ---
 date: 2026-10-04
 full_title: 04 - Cactus
+is_draft: true
 prompts:
 - date: 2026-10-04
   original_prompt: Cactus
