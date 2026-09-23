@@ -1,15 +1,15 @@
 site_name = "Singtober"
+description = "Vous connaissez Inktober ? Bienvenue dans Singtober.\nEn partant des mêmes prompts, on est partis pour un mois de petits extraits de chanson qui contiennent le prompt.\nOn s'ajoute un petit défi : pas plus de 30 min pour enregistrer un morceau.\nPar contre, ça sera très probablement du #NoFilter 😅"
+copyright = "CC BY-NC-SA"
+author = "galadrieve"
 locale = "fr-fr"
 timezone = "Europe/Paris"
-colors = ["#336699", "#669933", "#993366", "#996633", "#663399", "#339966"]
-index_colors = ["#336699", "#663399"]
+repository_url = "https://github.com/galadrieve/singtober"
+colors = [ "#336699", "#669933", "#993366", "#996633", "#663399", "#339966" ]
+index_colors = [ "#336699", "#663399" ]
 logo = "android-chrome-512x512.png"
 title_ttf_font = "Open Sans"
 body_ttf_font = "Gelasio"
-repository_url = "https://github.com/galadrieve/singtober"
-description = "Daily writing adapted to daily singing"
-author = "galadrieve"
-copyright = "CC BY-NC-SA"
 
 [[icon_links]]
 rel = "icon"
