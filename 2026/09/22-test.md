@@ -28,17 +28,17 @@ _"Anywhere the Bluebird Goes", the melody was written by Sam H. Stept as an upda
 
 <div class="paroles">
 
-Don't sit under the apple tree 
+Don't sit under the apple tree
 
 with anyone else but me
 
-Anyone else but me, 
+Anyone else but me,
 
-anyone else but me, 
+anyone else but me,
 
 no no no
 
-Don't sit under the apple tree 
+Don't sit under the apple tree
 
 with anyone else but me
 
