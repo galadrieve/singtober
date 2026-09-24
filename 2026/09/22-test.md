@@ -23,7 +23,7 @@ prompts:
 **Commentaires**
 
 <div class="commentaires">
-J'avoue, je me suis trouvée obligée d'enregistrer cette chanson jusqu'à la fin. _"Armstrong, un jour tôt ou tard..."
+J'avoue, je me suis trouvée obligée d'enregistrer cette chanson jusqu'à la fin. _"Armstrong, un jour tôt ou tard..._"
 </div>
 
 **Paroles**
@@ -96,7 +96,7 @@ And it'll be determined
 On the hill where you died
 That in terms of history
 You were way off on the wrong side
-But
+But 
 I will forgive you
 With kindness, grace, and elegance
 And I'll dance for eternity
