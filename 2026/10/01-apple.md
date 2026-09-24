@@ -25,5 +25,5 @@ main.markdown audio { display: block; width: 400px; max-width: 100%; margin: 0 a
 
 <audio controls src="/singtober/static/20261001.mp3"></audio>
 
-_Fun Wiki fact : Comme souvent pour les chansons de cette période, il s'agit d'un air beaucoup plus vieux remis au goût du jour :_ 
+_Fun Wiki fact : Comme souvent pour les chansons de cette période, il s'agit d'un air beaucoup plus vieux remis au goût du jour :_
 _"Anywhere the Bluebird Goes", the melody was written by Sam H. Stept as an updated version of the nineteenth-century English folk song "Long, Long Ago". Lew Brown and Charles Tobias wrote the lyrics and the song debuted in the 1939 Broadway musical Yokel Boy. After the United States entered the war in December 1941, Brown and Tobias modified the lyrics to their current form, with the chorus ending with "...till I come marching home"._
