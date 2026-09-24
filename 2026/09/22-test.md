@@ -20,12 +20,18 @@ prompts:
 
 <audio controls src="/singtober/static/20261001.mp3"></audio>
 
+**Commentaires**
+
+<div class="commentaires">
+
 _On commence directement avec un enregistrement à trois voix, parce que sure yeah why not..._
 _D'ailleurs, heureusement que je n'ai pas décidé de prendre le mot français "Pomme", ou vous auriez eu droit à la 5e de Beethoven ou à la Marche Impériale. Lucky you._
 
 [_Fun Wiki fact_](https://en.wikipedia.org/wiki/Don%27t_Sit_Under_the_Apple_Tree_\(with_Anyone_Else_but_Me\)) _: Comme souvent pour les chansons de cette période, il s'agit d'un air beaucoup plus vieux remis au goût du jour :_
 
 _"Anywhere the Bluebird Goes", the melody was written by Sam H. Stept as an updated version of the nineteenth-century English folk song "Long, Long Ago". Lew Brown and Charles Tobias wrote the lyrics and the song debuted in the 1939 Broadway musical Yokel Boy. After the United States entered the war in December 1941, Brown and Tobias modified the lyrics to their current form, with the chorus ending with "...till I come marching home"._
+
+</div>
 
 **Paroles**
 
