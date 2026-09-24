@@ -7,10 +7,21 @@ prompts:
   original_prompt: Bake
   title: Cuire
 ---
+
 <p align="center"><img src="/singtober/static/20261024.png" alt="Cuire" width="150"></p>
 
-**Titre :**
+<div class="infos">
 
+**Titre :**
 **Interprète original :**
+**Écouter :**
+
+</div>
 
 <audio controls src="/singtober/static/20261024.mp3"></audio>
+
+**Paroles**
+
+<div class="paroles">
+
+</div>

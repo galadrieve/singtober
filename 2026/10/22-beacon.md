@@ -7,10 +7,21 @@ prompts:
   original_prompt: Beacon
   title: Balise
 ---
+
 <p align="center"><img src="/singtober/static/20261022.png" alt="Balise" width="150"></p>
 
-**Titre :**
+<div class="infos">
 
+**Titre :**
 **Interprète original :**
+**Écouter :**
+
+</div>
 
 <audio controls src="/singtober/static/20261022.mp3"></audio>
+
+**Paroles**
+
+<div class="paroles">
+
+</div>

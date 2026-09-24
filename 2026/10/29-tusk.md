@@ -7,10 +7,21 @@ prompts:
   original_prompt: Tusk
   title: Défense
 ---
+
 <p align="center"><img src="/singtober/static/20261029.png" alt="Défense" width="150"></p>
 
-**Titre :**
+<div class="infos">
 
+**Titre :**
 **Interprète original :**
+**Écouter :**
+
+</div>
 
 <audio controls src="/singtober/static/20261029.mp3"></audio>
+
+**Paroles**
+
+<div class="paroles">
+
+</div>

@@ -7,10 +7,21 @@ prompts:
   original_prompt: Toss
   title: Lancer
 ---
+
 <p align="center"><img src="/singtober/static/20261012.png" alt="Lancer" width="150"></p>
 
-**Titre :**
+<div class="infos">
 
+**Titre :**
 **Interprète original :**
+**Écouter :**
+
+</div>
 
 <audio controls src="/singtober/static/20261012.mp3"></audio>
+
+**Paroles**
+
+<div class="paroles">
+
+</div>

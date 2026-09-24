@@ -7,10 +7,21 @@ prompts:
   original_prompt: Flightless
   title: Sans ailes
 ---
+
 <p align="center"><img src="/singtober/static/20261018.png" alt="Sans ailes" width="150"></p>
 
-**Titre :**
+<div class="infos">
 
+**Titre :**
 **Interprète original :**
+**Écouter :**
+
+</div>
 
 <audio controls src="/singtober/static/20261018.mp3"></audio>
+
+**Paroles**
+
+<div class="paroles">
+
+</div>

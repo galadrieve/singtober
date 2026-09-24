@@ -7,10 +7,21 @@ prompts:
   original_prompt: Cactus
   title: Cactus
 ---
+
 <p align="center"><img src="/singtober/static/20261004.png" alt="Cactus" width="150"></p>
 
-**Titre :**
+<div class="infos">
 
+**Titre :**
 **Interprète original :**
+**Écouter :**
+
+</div>
 
 <audio controls src="/singtober/static/20261004.mp3"></audio>
+
+**Paroles**
+
+<div class="paroles">
+
+</div>

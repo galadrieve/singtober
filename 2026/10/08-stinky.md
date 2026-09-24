@@ -7,10 +7,21 @@ prompts:
   original_prompt: Stinky
   title: Puant
 ---
+
 <p align="center"><img src="/singtober/static/20261008.png" alt="Puant" width="150"></p>
 
-**Titre :**
+<div class="infos">
 
+**Titre :**
 **Interprète original :**
+**Écouter :**
+
+</div>
 
 <audio controls src="/singtober/static/20261008.mp3"></audio>
+
+**Paroles**
+
+<div class="paroles">
+
+</div>

@@ -7,10 +7,21 @@ prompts:
   original_prompt: Miniature
   title: Miniature
 ---
+
 <p align="center"><img src="/singtober/static/20261003.png" alt="Miniature" width="150"></p>
 
-**Titre :**
+<div class="infos">
 
+**Titre :**
 **Interprète original :**
+**Écouter :**
+
+</div>
 
 <audio controls src="/singtober/static/20261003.mp3"></audio>
+
+**Paroles**
+
+<div class="paroles">
+
+</div>
