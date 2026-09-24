@@ -14,7 +14,7 @@ prompts:
 
 **Titre :**
 **Interprète original :**
-**Écouter :**
+**Écouter :** [version originale](https://...)
 
 </div>
 

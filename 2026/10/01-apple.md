@@ -13,7 +13,7 @@ prompts:
 
 **Titre :** Don't sit under the apple tree (with anyone else but me)
 **Made famous by :** Glenn Miller & the Andrews Sisters
-**Écouter :**
+**Écouter :** [version originale](https://...)
 
 </div>
 
