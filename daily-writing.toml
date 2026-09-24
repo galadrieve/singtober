@@ -9,7 +9,8 @@ colors = [ "#336699", "#669933", "#993366", "#996633", "#663399", "#339966" ]
 index_colors = [ "#336699", "#663399" ]
 logo = "android-chrome-512x512.png"
 title_ttf_font = "Open Sans"
-body_ttf_font = "Gelasio"
+body_ttf_font = "Carlito"
+extra_css = [ "static/singtober.css" ]
 
 [[icon_links]]
 rel = "icon"

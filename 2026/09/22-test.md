@@ -10,15 +10,6 @@ prompts:
 
 # 22 - TEST
 
-<style>
-@font-face { font-family: "Carlito"; font-weight: 400; src: url("/singtober/static/carlito-400.woff2") format("woff2"); }
-@font-face { font-family: "Carlito"; font-weight: 700; src: url("/singtober/static/carlito-700.woff2") format("woff2"); }
-main.markdown p { font-family: "Carlito", "Calibri", sans-serif; }
-main.markdown audio { display: block; width: 400px; max-width: 100%; margin: 0 auto; }
-main.markdown .paroles { border-left: 3px solid #D9621F; padding-left: 1em; margin: 1em 0; }
-main.markdown .paroles p { white-space: pre-line; line-height: 1.5; margin: 0 0 1.2em; }
-</style>
-
 <p align="center"><img src="/singtober/static/20261001.png" alt="Apple" width="150"></p>
 
 **Titre :** Don't sit under the apple tree (with anyone else but me)
