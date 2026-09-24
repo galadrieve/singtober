@@ -3,12 +3,11 @@ full_title: 01 - Pomme
 date: 2026-10-01
 is_draft: true
 prompts:
-  - title: Pomme
-    original_prompt: Apple
+  - title: Apple
     date: 2026-10-01
 ---
 
-# 01 - Pomme
+# 01 - Apple
 
 <style>
 @font-face { font-family: "Carlito"; font-weight: 400; src: url("/singtober/static/carlito-400.woff2") format("woff2"); }
