@@ -16,7 +16,7 @@ main.markdown p { font-family: "Carlito", "Calibri", sans-serif; }
 main.markdown audio { display: block; width: 400px; max-width: 100%; margin: 0 auto; }
 </style>
 
-<p align="center"><img src="/singtober/static/20261006.jpg" alt="Ogre" width="150"></p>
+<p align="center"><img src="/singtober/static/20261006.png" alt="Ogre" width="150"></p>
 
 **Titre :**
 
