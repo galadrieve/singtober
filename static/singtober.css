@@ -1,11 +1,11 @@
 /* Styles propres à Singtober, chargés sur toutes les pages (voir extra_css dans daily-writing.toml) */
 
-/* Lecteur audio : plus large et centré */
+/* Lecteur audio : plus large, centré, avec de l'espace au-dessus et en dessous */
 main.markdown audio {
   display: block;
   width: 400px;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 1.5em auto;
 }
 
 /* Bloc de paroles : trait orange à gauche, un couplet par paragraphe */
@@ -19,4 +19,11 @@ main.markdown .paroles p {
   white-space: pre-line;
   line-height: 1.5;
   margin: 0 0 1.2em;
+}
+
+/* Bloc Titre / Interprète / YouTube : une ligne par info, sans espace entre elles */
+main.markdown .infos p {
+  white-space: pre-line;
+  line-height: 1.5;
+  margin: 0;
 }

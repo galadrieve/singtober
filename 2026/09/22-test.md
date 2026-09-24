@@ -10,11 +10,13 @@ prompts:
 
 <p align="center"><img src="/singtober/static/20261001.png" alt="Apple" width="150"></p>
 
+<div class="infos">
+
 **Titre :** Don't sit under the apple tree (with anyone else but me)
-
 **Made famous by :** Glenn Miller & the Andrews Sisters
-
 **YouTube :** [écouter la version originale](https://www.youtube.com/)
+
+</div>
 
 <audio controls src="/singtober/static/20261001.mp3"></audio>
 
