@@ -14,7 +14,7 @@ prompts:
 
 **Titre :** Don't sit under the apple tree (with anyone else but me)
 **Made famous by :** Glenn Miller & the Andrews Sisters
-**Écouter :** [version originale](https://www.youtube.com/)
+**Écouter :** [version originale](https://youtu.be/YcyiC79l910?si=Io4yd2ZS13KCqsB2&t=45), [[version de l'accompagnement (plus moderne)]](https://www.youtube.com/watch?v=AR1eTaJS7ZU&list=RDAR1eTaJS7ZU&start_radio=1)
 
 </div>
 
