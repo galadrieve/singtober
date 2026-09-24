@@ -7,8 +7,6 @@ prompts:
   original_prompt: Mystical
   title: Mystique
 ---
-# 10 - Mystique
-
 <p align="center"><img src="/singtober/static/20261010.png" alt="Mystique" width="150"></p>
 
 **Titre :**

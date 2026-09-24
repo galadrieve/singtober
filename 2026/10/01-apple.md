@@ -7,8 +7,6 @@ prompts:
     date: 2026-10-01
 ---
 
-# 01 - Apple
-
 <p align="center"><img src="/singtober/static/20261001.png" alt="Apple" width="150"></p>
 
 **Titre :** Don't sit under the apple tree (with anyone else but me)

@@ -7,8 +7,6 @@ prompts:
   original_prompt: Flimsy
   title: Fragile
 ---
-# 13 - Fragile
-
 <p align="center"><img src="/singtober/static/20261013.png" alt="Fragile" width="150"></p>
 
 **Titre :**

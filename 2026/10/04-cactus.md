@@ -7,8 +7,6 @@ prompts:
   original_prompt: Cactus
   title: Cactus
 ---
-# 04 - Cactus
-
 <p align="center"><img src="/singtober/static/20261004.png" alt="Cactus" width="150"></p>
 
 **Titre :**

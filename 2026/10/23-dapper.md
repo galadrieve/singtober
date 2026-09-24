@@ -7,8 +7,6 @@ prompts:
   original_prompt: Dapper
   title: Chic
 ---
-# 23 - Chic
-
 <p align="center"><img src="/singtober/static/20261023.png" alt="Chic" width="150"></p>
 
 **Titre :**

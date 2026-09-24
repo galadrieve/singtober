@@ -7,8 +7,6 @@ prompts:
   original_prompt: Flex
   title: Flexion
 ---
-# 31 - Flexion
-
 <p align="center"><img src="/singtober/static/20261031.png" alt="Flexion" width="150"></p>
 
 **Titre :**

@@ -7,8 +7,6 @@ prompts:
   original_prompt: Tusk
   title: Défense
 ---
-# 29 - Défense
-
 <p align="center"><img src="/singtober/static/20261029.png" alt="Défense" width="150"></p>
 
 **Titre :**

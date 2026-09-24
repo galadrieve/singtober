@@ -7,8 +7,6 @@ prompts:
   original_prompt: Lounge
   title: Salon
 ---
-# 20 - Salon
-
 <p align="center"><img src="/singtober/static/20261020.png" alt="Salon" width="150"></p>
 
 **Titre :**

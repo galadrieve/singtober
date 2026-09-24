@@ -7,8 +7,6 @@ prompts:
   original_prompt: Cookie
   title: Cookie
 ---
-# 30 - Cookie
-
 <p align="center"><img src="/singtober/static/20261030.png" alt="Cookie" width="150"></p>
 
 **Titre :**

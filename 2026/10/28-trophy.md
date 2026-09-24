@@ -7,8 +7,6 @@ prompts:
   original_prompt: Trophy
   title: Trophée
 ---
-# 28 - Trophée
-
 <p align="center"><img src="/singtober/static/20261028.png" alt="Trophée" width="150"></p>
 
 **Titre :**

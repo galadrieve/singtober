@@ -7,8 +7,6 @@ prompts:
   original_prompt: Confused
   title: Confus
 ---
-# 19 - Confus
-
 <p align="center"><img src="/singtober/static/20261019.png" alt="Confus" width="150"></p>
 
 **Titre :**

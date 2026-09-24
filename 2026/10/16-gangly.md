@@ -7,8 +7,6 @@ prompts:
   original_prompt: Gangly
   title: Dégingandé
 ---
-# 16 - Dégingandé
-
 <p align="center"><img src="/singtober/static/20261016.png" alt="Dégingandé" width="150"></p>
 
 **Titre :**

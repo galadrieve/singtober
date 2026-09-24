@@ -7,8 +7,6 @@ prompts:
   original_prompt: Hooray
   title: Hourra
 ---
-# 15 - Hourra
-
 <p align="center"><img src="/singtober/static/20261015.png" alt="Hourra" width="150"></p>
 
 **Titre :**

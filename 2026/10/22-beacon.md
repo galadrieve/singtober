@@ -7,8 +7,6 @@ prompts:
   original_prompt: Beacon
   title: Balise
 ---
-# 22 - Balise
-
 <p align="center"><img src="/singtober/static/20261022.png" alt="Balise" width="150"></p>
 
 **Titre :**

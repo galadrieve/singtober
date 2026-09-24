@@ -1,5 +1,5 @@
 ---
-full_title: 22 - Test
+full_title: 22 - TEST
 date: 2026-09-22
 is_draft: false
 prompts:
@@ -7,8 +7,6 @@ prompts:
     original_prompt: Appletest
     date: 2026-09-22
 ---
-
-# 22 - TEST
 
 <p align="center"><img src="/singtober/static/20261001.png" alt="Apple" width="150"></p>
 
@@ -24,7 +22,7 @@ prompts:
 
 _"Anywhere the Bluebird Goes", the melody was written by Sam H. Stept as an updated version of the nineteenth-century English folk song "Long, Long Ago". Lew Brown and Charles Tobias wrote the lyrics and the song debuted in the 1939 Broadway musical Yokel Boy. After the United States entered the war in December 1941, Brown and Tobias modified the lyrics to their current form, with the chorus ending with "...till I come marching home"._
 
-### Paroles
+**Paroles**
 
 <div class="paroles">
 

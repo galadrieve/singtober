@@ -7,8 +7,6 @@ prompts:
   original_prompt: Fracture
   title: Fracture
 ---
-# 25 - Fracture
-
 <p align="center"><img src="/singtober/static/20261025.png" alt="Fracture" width="150"></p>
 
 **Titre :**

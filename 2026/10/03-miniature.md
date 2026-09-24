@@ -7,8 +7,6 @@ prompts:
   original_prompt: Miniature
   title: Miniature
 ---
-# 03 - Miniature
-
 <p align="center"><img src="/singtober/static/20261003.png" alt="Miniature" width="150"></p>
 
 **Titre :**

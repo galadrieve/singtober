@@ -7,8 +7,6 @@ prompts:
   original_prompt: Ogre
   title: Ogre
 ---
-# 06 - Ogre
-
 <p align="center"><img src="/singtober/static/20261006.png" alt="Ogre" width="150"></p>
 
 **Titre :**

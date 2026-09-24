@@ -7,8 +7,6 @@ prompts:
   original_prompt: Dumb
   title: Stupide
 ---
-# 27 - Stupide
-
 <p align="center"><img src="/singtober/static/20261027.png" alt="Stupide" width="150"></p>
 
 **Titre :**

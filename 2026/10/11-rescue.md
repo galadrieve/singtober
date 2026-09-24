@@ -7,8 +7,6 @@ prompts:
   original_prompt: Rescue
   title: Sauvetage
 ---
-# 11 - Sauvetage
-
 <p align="center"><img src="/singtober/static/20261011.png" alt="Sauvetage" width="150"></p>
 
 **Titre :**

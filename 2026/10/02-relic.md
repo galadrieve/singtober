@@ -6,8 +6,6 @@ prompts:
 - date: 2026-10-02
   title: Relic
 ---
-# 02 - Relic
-
 <p align="center"><img src="/singtober/static/20261002.png" alt="Relic" width="150"></p>
 
 **Titre :**

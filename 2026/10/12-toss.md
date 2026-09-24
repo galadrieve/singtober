@@ -7,8 +7,6 @@ prompts:
   original_prompt: Toss
   title: Lancer
 ---
-# 12 - Lancer
-
 <p align="center"><img src="/singtober/static/20261012.png" alt="Lancer" width="150"></p>
 
 **Titre :**

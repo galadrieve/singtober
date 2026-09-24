@@ -7,8 +7,6 @@ prompts:
   original_prompt: Panic
   title: Panique
 ---
-# 07 - Panique
-
 <p align="center"><img src="/singtober/static/20261007.png" alt="Panique" width="150"></p>
 
 **Titre :**

@@ -7,8 +7,6 @@ prompts:
   original_prompt: Smack
   title: Gifle
 ---
-# 05 - Gifle
-
 <p align="center"><img src="/singtober/static/20261005.png" alt="Gifle" width="150"></p>
 
 **Titre :**

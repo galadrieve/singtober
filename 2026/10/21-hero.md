@@ -7,8 +7,6 @@ prompts:
   original_prompt: Hero
   title: Héros
 ---
-# 21 - Héros
-
 <p align="center"><img src="/singtober/static/20261021.png" alt="Héros" width="150"></p>
 
 **Titre :**

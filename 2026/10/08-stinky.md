@@ -7,8 +7,6 @@ prompts:
   original_prompt: Stinky
   title: Puant
 ---
-# 08 - Puant
-
 <p align="center"><img src="/singtober/static/20261008.png" alt="Puant" width="150"></p>
 
 **Titre :**

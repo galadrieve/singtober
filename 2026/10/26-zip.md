@@ -7,8 +7,6 @@ prompts:
   original_prompt: Zip
   title: Zip
 ---
-# 26 - Zip
-
 <p align="center"><img src="/singtober/static/20261026.png" alt="Zip" width="150"></p>
 
 **Titre :**

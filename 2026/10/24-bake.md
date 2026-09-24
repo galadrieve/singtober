@@ -7,8 +7,6 @@ prompts:
   original_prompt: Bake
   title: Cuire
 ---
-# 24 - Cuire
-
 <p align="center"><img src="/singtober/static/20261024.png" alt="Cuire" width="150"></p>
 
 **Titre :**

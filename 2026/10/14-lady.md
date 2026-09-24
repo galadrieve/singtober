@@ -7,8 +7,6 @@ prompts:
   original_prompt: Lady
   title: Dame
 ---
-# 14 - Dame
-
 <p align="center"><img src="/singtober/static/20261014.png" alt="Dame" width="150"></p>
 
 **Titre :**
