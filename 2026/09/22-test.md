@@ -28,21 +28,20 @@ _"Anywhere the Bluebird Goes", the melody was written by Sam H. Stept as an upda
 
 <div class="paroles">
 
-Lorem ipsum dolor sit amet
-Consectetur adipiscing elit
-Sed do eiusmod tempor
-Incididunt ut labore et dolore
+Don't sit under the apple tree 
 
-_Magna aliqua, ut enim ad minim
-Veniam, quis nostrud exercitation
-Ullamco laboris nisi ut aliquip_
+with anyone else but me
 
-Duis aute irure dolor in reprehenderit
-In voluptate velit esse cillum
-Dolore eu fugiat nulla pariatur
+Anyone else but me, 
 
-_Magna aliqua, ut enim ad minim
-Veniam, quis nostrud exercitation
-Ullamco laboris nisi ut aliquip_
+anyone else but me, 
+
+no no no
+
+Don't sit under the apple tree 
+
+with anyone else but me
+
+Till I come marchin' home
 
 </div>
