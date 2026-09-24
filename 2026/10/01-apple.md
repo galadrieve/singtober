@@ -21,7 +21,7 @@ main.markdown audio { display: block; width: 400px; max-width: 100%; margin: 0 a
 
 **Titre :** Don't sit under the apple tree (with anyone else but me)
 
-**Made famous by :** Glenn Miller the Andrews Sisters
+**Made famous by :** Glenn Miller & the Andrews Sisters
 
 <audio controls src="/singtober/static/20261001.mp3"></audio>
 
