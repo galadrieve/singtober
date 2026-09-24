@@ -28,9 +28,9 @@ main.markdown .infos p {
   margin: 0;
 }
 
-/* Bloc de commentaires : même présentation que les paroles, paragraphes normaux */
+/* Bloc de commentaires : comme les paroles, avec un trait bleu-vert */
 main.markdown .commentaires {
-  border-left: 3px solid #D9621F;
+  border-left: 3px solid #62CCC0;
   padding-left: 1em;
   margin: 1em 0;
 }
