@@ -17,7 +17,7 @@ main.markdown p { font-family: "Carlito", "Calibri", sans-serif; }
 main.markdown audio { display: block; width: 400px; max-width: 100%; margin: 0 auto; }
 </style>
 
-<p align="center"><img src="/singtober/static/20261001.jpg" alt="Pomme" width="150"></p>
+<p align="center"><img src="/singtober/static/20261001.png" alt="Pomme" width="150"></p>
 
 **Titre :** Don't sit under the apple tree (with anyone else but me)
 
