@@ -95,7 +95,7 @@ And it'll be determined
 On the hill where you died
 That in terms of history
 You were way off on the wrong side
-But 
+But
 I will forgive you
 With kindness, grace, and elegance
 And I'll dance for eternity
