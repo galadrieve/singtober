@@ -1,5 +1,5 @@
 ---
-full_title: 01 - Pomme
+full_title: 01 - Apple
 date: 2026-10-01
 is_draft: true
 prompts:
