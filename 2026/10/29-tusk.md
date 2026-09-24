@@ -24,10 +24,14 @@ prompts:
 
 <div class="commentaires">
 
+(remplace cette ligne par tes commentaires)
+
 </div>
 
 **Paroles**
 
 <div class="paroles">
+
+(remplace cette ligne par les paroles)
 
 </div>
