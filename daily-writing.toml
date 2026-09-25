@@ -36,3 +36,17 @@ href = "site.webmanifest"
 [cms_config.backend]
 name = "github"
 repo = "galadrieve/singtober"
+
+[[cms_config.asset_collections]]
+name = "singto2026-mp3"
+label = "Singtober 2026 – MP3"
+icon = "music_note"
+media_folder = "/static/singto2026/mp3"
+public_folder = "/singtober/static/singto2026/mp3"
+
+[[cms_config.asset_collections]]
+name = "singto2026-pics"
+label = "Singtober 2026 – Images"
+icon = "image"
+media_folder = "/static/singto2026/pics"
+public_folder = "/singtober/static/singto2026/pics"

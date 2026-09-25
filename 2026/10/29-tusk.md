@@ -8,7 +8,7 @@ prompts:
   title: Défense
 ---
 
-<p align="center"><img src="/singtober/static/20261029.png" alt="Défense" width="150"></p>
+<p align="center"><img src="/singtober/static/singto2026/pics/20261029.png" alt="Défense" width="150"></p>
 
 <div class="infos">
 
@@ -18,7 +18,7 @@ prompts:
 
 </div>
 
-<audio controls src="/singtober/static/20261029.mp3"></audio>
+<audio controls src="/singtober/static/singto2026/mp3/20261029.mp3"></audio>
 
 **Commentaires**
 

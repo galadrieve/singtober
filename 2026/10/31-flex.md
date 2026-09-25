@@ -8,7 +8,7 @@ prompts:
   title: Flexion
 ---
 
-<p align="center"><img src="/singtober/static/20261031.png" alt="Flexion" width="150"></p>
+<p align="center"><img src="/singtober/static/singto2026/pics/20261031.png" alt="Flexion" width="150"></p>
 
 <div class="infos">
 
@@ -18,7 +18,7 @@ prompts:
 
 </div>
 
-<audio controls src="/singtober/static/20261031.mp3"></audio>
+<audio controls src="/singtober/static/singto2026/mp3/20261031.mp3"></audio>
 
 **Commentaires**
 
