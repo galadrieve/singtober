@@ -8,7 +8,7 @@ prompts:
   title: Héros
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261021.png" alt="Héros" width="150"></p>
+![Héros](/singtober/static/singto2026/pics/20261021.png)
 
 <div class="infos">
 

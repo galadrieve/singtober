@@ -4,10 +4,11 @@ date: 2026-10-02
 is_draft: true
 prompts:
   - title: Relic
+    original_prompt: Relic
     date: 2026-10-02
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261002.png" alt="Relic" width="150"></p>
+![Relic](/singtober/static/singto2026/pics/20261002.png)
 
 <div class="infos">
 

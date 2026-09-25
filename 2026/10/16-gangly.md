@@ -8,7 +8,7 @@ prompts:
   title: Dégingandé
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261016.png" alt="Dégingandé" width="150"></p>
+![Dégingandé](/singtober/static/singto2026/pics/20261016.png)
 
 <div class="infos">
 

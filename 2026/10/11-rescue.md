@@ -8,7 +8,7 @@ prompts:
   title: Sauvetage
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261011.png" alt="Sauvetage" width="150"></p>
+![Sauvetage](/singtober/static/singto2026/pics/20261011.png)
 
 <div class="infos">
 

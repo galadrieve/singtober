@@ -8,7 +8,7 @@ prompts:
   title: Défense
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261029.png" alt="Défense" width="150"></p>
+![Défense](/singtober/static/singto2026/pics/20261029.png)
 
 <div class="infos">
 

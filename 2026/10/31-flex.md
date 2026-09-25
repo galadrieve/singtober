@@ -8,7 +8,7 @@ prompts:
   title: Flexion
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261031.png" alt="Flexion" width="150"></p>
+![Flexion](/singtober/static/singto2026/pics/20261031.png)
 
 <div class="infos">
 

@@ -4,10 +4,11 @@ date: 2026-10-01
 is_draft: true
 prompts:
   - title: Apple
+    original_prompt: Apple
     date: 2026-10-01
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261001.png" alt="Apple" width="150"></p>
+![Apple](/singtober/static/singto2026/pics/20261001.png)
 
 <div class="infos">
 

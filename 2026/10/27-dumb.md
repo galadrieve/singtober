@@ -8,7 +8,7 @@ prompts:
   title: Stupide
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261027.png" alt="Stupide" width="150"></p>
+![Stupide](/singtober/static/singto2026/pics/20261027.png)
 
 <div class="infos">
 

@@ -8,7 +8,7 @@ prompts:
   title: Lancer
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261012.png" alt="Lancer" width="150"></p>
+![Lancer](/singtober/static/singto2026/pics/20261012.png)
 
 <div class="infos">
 

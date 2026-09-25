@@ -8,7 +8,7 @@ prompts:
   title: Trophée
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261028.png" alt="Trophée" width="150"></p>
+![Trophée](/singtober/static/singto2026/pics/20261028.png)
 
 <div class="infos">
 

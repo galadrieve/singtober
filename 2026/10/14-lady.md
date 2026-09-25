@@ -8,7 +8,7 @@ prompts:
   title: Dame
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261014.png" alt="Dame" width="150"></p>
+![Dame](/singtober/static/singto2026/pics/20261014.png)
 
 <div class="infos">
 

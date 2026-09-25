@@ -8,7 +8,7 @@ prompts:
   title: Chic
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261023.png" alt="Chic" width="150"></p>
+![Chic](/singtober/static/singto2026/pics/20261023.png)
 
 <div class="infos">
 

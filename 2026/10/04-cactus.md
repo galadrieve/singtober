@@ -8,7 +8,7 @@ prompts:
   title: Cactus
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261004.png" alt="Cactus" width="150"></p>
+![Cactus](/singtober/static/singto2026/pics/20261004.png)
 
 <div class="infos">
 

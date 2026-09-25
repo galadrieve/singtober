@@ -8,7 +8,7 @@ prompts:
   title: Bélier
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261009.png" alt="Bélier" width="150"></p>
+![Bélier](/singtober/static/singto2026/pics/20261009.png)
 
 <div class="infos">
 

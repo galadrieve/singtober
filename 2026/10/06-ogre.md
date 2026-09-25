@@ -8,7 +8,7 @@ prompts:
   title: Ogre
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261006.png" alt="Ogre" width="150"></p>
+![Ogre](/singtober/static/singto2026/pics/20261006.png)
 
 <div class="infos">
 

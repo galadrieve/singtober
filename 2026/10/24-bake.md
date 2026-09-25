@@ -8,7 +8,7 @@ prompts:
   title: Cuire
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261024.png" alt="Cuire" width="150"></p>
+![Cuire](/singtober/static/singto2026/pics/20261024.png)
 
 <div class="infos">
 

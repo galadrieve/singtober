@@ -8,7 +8,7 @@ prompts:
   title: Fragile
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261013.png" alt="Fragile" width="150"></p>
+![Fragile](/singtober/static/singto2026/pics/20261013.png)
 
 <div class="infos">
 

@@ -8,7 +8,7 @@ prompts:
   title: Miniature
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261003.png" alt="Miniature" width="150"></p>
+![Miniature](/singtober/static/singto2026/pics/20261003.png)
 
 <div class="infos">
 

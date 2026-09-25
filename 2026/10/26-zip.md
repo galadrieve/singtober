@@ -8,7 +8,7 @@ prompts:
   title: Zip
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261026.png" alt="Zip" width="150"></p>
+![Zip](/singtober/static/singto2026/pics/20261026.png)
 
 <div class="infos">
 

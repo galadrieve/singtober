@@ -8,7 +8,7 @@ prompts:
   title: Confus
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261019.png" alt="Confus" width="150"></p>
+![Confus](/singtober/static/singto2026/pics/20261019.png)
 
 <div class="infos">
 

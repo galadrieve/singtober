@@ -8,7 +8,7 @@ prompts:
   title: Salon
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261020.png" alt="Salon" width="150"></p>
+![Salon](/singtober/static/singto2026/pics/20261020.png)
 
 <div class="infos">
 

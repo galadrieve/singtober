@@ -8,7 +8,7 @@ prompts:
   title: Panique
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261007.png" alt="Panique" width="150"></p>
+![Panique](/singtober/static/singto2026/pics/20261007.png)
 
 <div class="infos">
 

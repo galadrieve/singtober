@@ -8,7 +8,7 @@ prompts:
     date: 2026-09-22
 ---
 
-<p align="center"><img src="/singtober/static/android-chrome-512x512.png" alt="Test" width="150"></p>
+![Test](/singtober/static/android-chrome-512x512.png)
 
 <div class="infos">
 

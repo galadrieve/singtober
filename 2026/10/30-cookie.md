@@ -8,7 +8,7 @@ prompts:
   title: Cookie
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261030.png" alt="Cookie" width="150"></p>
+![Cookie](/singtober/static/singto2026/pics/20261030.png)
 
 <div class="infos">
 

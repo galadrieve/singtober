@@ -8,7 +8,7 @@ prompts:
   title: Sans ailes
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261018.png" alt="Sans ailes" width="150"></p>
+![Sans ailes](/singtober/static/singto2026/pics/20261018.png)
 
 <div class="infos">
 

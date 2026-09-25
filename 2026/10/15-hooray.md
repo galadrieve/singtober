@@ -8,7 +8,7 @@ prompts:
   title: Hourra
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261015.png" alt="Hourra" width="150"></p>
+![Hourra](/singtober/static/singto2026/pics/20261015.png)
 
 <div class="infos">
 

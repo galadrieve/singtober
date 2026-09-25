@@ -8,7 +8,7 @@ prompts:
   title: Balise
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261022.png" alt="Balise" width="150"></p>
+![Balise](/singtober/static/singto2026/pics/20261022.png)
 
 <div class="infos">
 

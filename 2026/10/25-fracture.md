@@ -8,7 +8,7 @@ prompts:
   title: Fracture
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261025.png" alt="Fracture" width="150"></p>
+![Fracture](/singtober/static/singto2026/pics/20261025.png)
 
 <div class="infos">
 

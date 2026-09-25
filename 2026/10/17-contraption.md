@@ -8,7 +8,7 @@ prompts:
   title: Bidule
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261017.png" alt="Bidule" width="150"></p>
+![Bidule](/singtober/static/singto2026/pics/20261017.png)
 
 <div class="infos">
 

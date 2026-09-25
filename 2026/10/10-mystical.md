@@ -8,7 +8,7 @@ prompts:
   title: Mystique
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261010.png" alt="Mystique" width="150"></p>
+![Mystique](/singtober/static/singto2026/pics/20261010.png)
 
 <div class="infos">
 

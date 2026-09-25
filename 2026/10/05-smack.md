@@ -8,7 +8,7 @@ prompts:
   title: Gifle
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261005.png" alt="Gifle" width="150"></p>
+![Gifle](/singtober/static/singto2026/pics/20261005.png)
 
 <div class="infos">
 

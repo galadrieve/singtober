@@ -8,7 +8,7 @@ prompts:
   title: Puant
 ---
 
-<p align="center"><img src="/singtober/static/singto2026/pics/20261008.png" alt="Puant" width="150"></p>
+![Puant](/singtober/static/singto2026/pics/20261008.png)
 
 <div class="infos">
 

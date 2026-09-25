@@ -1,5 +1,12 @@
 /* Styles propres à Singtober, chargés sur toutes les pages (voir extra_css dans daily-writing.toml) */
 
+/* Pochette : une image seule dans son paragraphe est centrée, en petit */
+main.markdown p > img:only-child {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+}
+
 /* Lecteur audio : plus large, centré, avec de l'espace au-dessus et en dessous */
 main.markdown audio {
   display: block;
@@ -8,34 +15,36 @@ main.markdown audio {
   margin: 1.5em auto;
 }
 
-/* Bloc de paroles : trait orange à gauche, un couplet par paragraphe */
-main.markdown .paroles {
-  border-left: 3px solid #D9621F;
-  padding-left: 1em;
-  margin: 1em 0;
-}
-
-main.markdown .paroles p {
+/* Blocs Infos, Commentaires et Paroles : une ligne tapée = une ligne affichée */
+main.markdown :is(.infos, .commentaires, .paroles) p {
   white-space: pre-line;
   line-height: 1.5;
-  margin: 0 0 1.2em;
 }
 
-/* Bloc Titre / Interprète / YouTube : une ligne par info, sans espace entre elles */
+/* Infos (titre, interprète, lien) : sans espace entre les lignes */
 main.markdown .infos p {
-  white-space: pre-line;
-  line-height: 1.5;
   margin: 0;
 }
 
-/* Bloc de commentaires : comme les paroles, avec un trait bleu-vert */
-main.markdown .commentaires {
-  border-left: 3px solid #62CCC0;
+/* Commentaires et Paroles : sous-parties avec un trait coloré à gauche */
+main.markdown :is(.commentaires, .paroles) {
+  border-left: 3px solid var(--trait);
   padding-left: 1em;
   margin: 1em 0;
 }
 
+main.markdown .commentaires {
+  --trait: #62CCC0;
+}
+
+main.markdown .paroles {
+  --trait: #D9621F;
+}
+
 main.markdown .commentaires p {
-  white-space: pre-line;
   margin: 0 0 0.8em;
+}
+
+main.markdown .paroles p {
+  margin: 0 0 1.2em;
 }
