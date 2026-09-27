@@ -1,7 +1,7 @@
 ---
 full_title: 01 - Apple
 date: 2026-10-01
-is_draft: true
+is_draft: false
 prompts:
   - title: Apple
     original_prompt: Apple
