@@ -7,14 +7,11 @@ prompts:
   original_prompt: Flex
   title: Flexion
 ---
-
 ![Flexion](/singtober/static/singto2026/pics/20261031.png)
 
 <div class="infos">
 
-**Titre :**
-**Interprète original :**
-**Écouter :** [version originale](https://...)
+**Titre :** **Interprète original :** **Écouter :** [version originale](https://...)
 
 </div>
 

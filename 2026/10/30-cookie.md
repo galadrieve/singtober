@@ -7,14 +7,11 @@ prompts:
   original_prompt: Cookie
   title: Cookie
 ---
-
 ![Cookie](/singtober/static/singto2026/pics/20261030.png)
 
 <div class="infos">
 
-**Titre :**
-**Interprète original :**
-**Écouter :** [version originale](https://...)
+**Titre :** **Interprète original :** **Écouter :** [version originale](https://...)
 
 </div>
 

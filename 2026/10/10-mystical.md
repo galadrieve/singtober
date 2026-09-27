@@ -7,14 +7,11 @@ prompts:
   original_prompt: Mystical
   title: Mystique
 ---
-
 ![Mystique](/singtober/static/singto2026/pics/20261010.png)
 
 <div class="infos">
 
-**Titre :**
-**Interprète original :**
-**Écouter :** [version originale](https://...)
+**Titre :** **Interprète original :** **Écouter :** [version originale](https://...)
 
 </div>
 

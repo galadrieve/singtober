@@ -7,14 +7,11 @@ prompts:
   original_prompt: Fracture
   title: Fracture
 ---
-
 ![Fracture](/singtober/static/singto2026/pics/20261025.png)
 
 <div class="infos">
 
-**Titre :**
-**Interprète original :**
-**Écouter :** [version originale](https://...)
+**Titre :** **Interprète original :** **Écouter :** [version originale](https://...)
 
 </div>
 

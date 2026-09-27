@@ -7,14 +7,11 @@ prompts:
   original_prompt: Gangly
   title: Dégingandé
 ---
-
 ![Dégingandé](/singtober/static/singto2026/pics/20261016.png)
 
 <div class="infos">
 
-**Titre :**
-**Interprète original :**
-**Écouter :** [version originale](https://...)
+**Titre :** **Interprète original :** **Écouter :** [version originale](https://...)
 
 </div>
 

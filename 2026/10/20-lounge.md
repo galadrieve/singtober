@@ -7,14 +7,11 @@ prompts:
   original_prompt: Lounge
   title: Salon
 ---
-
 ![Salon](/singtober/static/singto2026/pics/20261020.png)
 
 <div class="infos">
 
-**Titre :**
-**Interprète original :**
-**Écouter :** [version originale](https://...)
+**Titre :** **Interprète original :** **Écouter :** [version originale](https://...)
 
 </div>
 

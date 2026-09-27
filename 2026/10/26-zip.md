@@ -7,14 +7,11 @@ prompts:
   original_prompt: Zip
   title: Zip
 ---
-
 ![Zip](/singtober/static/singto2026/pics/20261026.png)
 
 <div class="infos">
 
-**Titre :**
-**Interprète original :**
-**Écouter :** [version originale](https://...)
+**Titre :** **Interprète original :** **Écouter :** [version originale](https://...)
 
 </div>
 

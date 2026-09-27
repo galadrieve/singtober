@@ -7,14 +7,11 @@ prompts:
   original_prompt: Tusk
   title: Défense
 ---
-
 ![Défense](/singtober/static/singto2026/pics/20261029.png)
 
 <div class="infos">
 
-**Titre :**
-**Interprète original :**
-**Écouter :** [version originale](https://...)
+**Titre :** **Interprète original :** **Écouter :** [version originale](https://...)
 
 </div>
 
