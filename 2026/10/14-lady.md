@@ -7,11 +7,14 @@ prompts:
   original_prompt: Lady
   title: Dame
 ---
+
 ![Dame](/singtober/static/singto2026/pics/20261014.png)
 
 <div class="infos">
 
-**Titre :** **Interprète original :** **Écouter :** [version originale](https://...)
+**Titre :**
+**Interprète original :**
+**Écouter :** [version originale](https://...)
 
 </div>
 

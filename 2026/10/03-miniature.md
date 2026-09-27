@@ -7,11 +7,14 @@ prompts:
   original_prompt: Miniature
   title: Miniature
 ---
+
 ![Miniature](/singtober/static/singto2026/pics/20261003.png)
 
 <div class="infos">
 
-**Titre :** **Interprète original :** **Écouter :** [version originale](https://...)
+**Titre :**
+**Interprète original :**
+**Écouter :** [version originale](https://...)
 
 </div>
 

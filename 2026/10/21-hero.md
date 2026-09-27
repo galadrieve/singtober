@@ -7,11 +7,14 @@ prompts:
   original_prompt: Hero
   title: Héros
 ---
+
 ![Héros](/singtober/static/singto2026/pics/20261021.png)
 
 <div class="infos">
 
-**Titre :** **Interprète original :** **Écouter :** [version originale](https://...)
+**Titre :**
+**Interprète original :**
+**Écouter :** [version originale](https://...)
 
 </div>
 
