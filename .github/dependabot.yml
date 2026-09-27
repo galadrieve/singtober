@@ -6,6 +6,10 @@ updates:
       interval: "weekly"
     cooldown:
       default-days: 3
+    # Temporaire : les versions 2026.9.8+ de daily-writing réécrivent le texte des entrées
+    # (voir l'issue ouverte sur ewjoachim/daily-writing). À retirer une fois corrigé.
+    ignore:
+      - dependency-name: "daily-writing"
     groups:
       python:
         patterns: ["*"]
