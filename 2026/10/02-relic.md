@@ -26,6 +26,8 @@ prompts:
 
 J'avoue, je me suis trouvée obligée d'enregistrer cette chanson jusqu'à la fin. _"Armstrong, un jour tôt ou tard..."_
 
+Par contre, soyez compréhensifs : j'ai enregistré une chanson complète que _je ne connaissais absolument pas_ avant ce Singtober, en 50 min. Mon perfectionnisme ne nous remercie pas.
+
 </div>
 
 **Paroles**
