@@ -1,7 +1,7 @@
 ---
 full_title: 02 - Relic
 date: 2026-10-02
-is_draft: true
+is_draft: false
 prompts:
   - title: Relic
     original_prompt: Relic
