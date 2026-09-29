@@ -24,7 +24,7 @@ prompts:
 
 <div class="commentaires">
 
-J'avoue, je me suis trouvée obligée d'enregistrer cette chanson jusqu'à la fin. _"Armstrong, un jour tôt ou tard..."
+J'avoue, je me suis trouvée obligée d'enregistrer cette chanson jusqu'à la fin. _"Armstrong, un jour tôt ou tard..."_
 
 </div>
 
@@ -35,7 +35,7 @@ J'avoue, je me suis trouvée obligée d'enregistrer cette chanson jusqu'à la fi
 One day when they find
 My bones in the ground
 Whoever they are will say
-“Look what we found
+"Look what we found
 A historical find
 It's a relic of time"
 
