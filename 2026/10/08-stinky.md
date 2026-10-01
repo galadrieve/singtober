@@ -5,13 +5,14 @@ is_draft: true
 prompts:
 - date: 2026-10-08
   title: Puant
+  original_prompt: Stinky
 ---
 
 ![Puant](/singtober/static/singto2026/pics/20261008.png)
 
 <div class="infos">
 
-**Titre :**Test
+**Titre :** Test
 **Interprète original :**
 **Écouter :** [version originale](https://...)
 
@@ -30,6 +31,7 @@ prompts:
 **Paroles**
 
 <div class="paroles">
+
 (remplace cette ligne par les paroles)
 
 </div>
