@@ -24,7 +24,9 @@ prompts:
 
 <div class="commentaires">
 
-Pas grand chose à dire, j'avoue être tombée en panne d'inspiration sur celle-là, du coup 1- ça permet de faire du twang (j'ai a priori pas trouvé de lien intéressant pour vous décrire ce que c'est) et 2- j'ai fait les chœurs (mais une seule voix)
+Pas grand chose à dire, j'avoue être tombée en panne d'inspiration sur celle-là, du coup ça permet de faire du twang (j'ai a priori pas trouvé de lien intéressant pour vous décrire ce que c'est).
+
+J'avais prévu de faire les choeurs, mais ça rentrait pas en 30 min 🤷‍♂️
 
 </div>
 
