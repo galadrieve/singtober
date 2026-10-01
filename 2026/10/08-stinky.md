@@ -4,7 +4,6 @@ full_title: 08 - Puant
 is_draft: true
 prompts:
 - date: 2026-10-08
-  original_prompt: Stinky
   title: Puant
 ---
 
@@ -12,7 +11,7 @@ prompts:
 
 <div class="infos">
 
-**Titre :**
+**Titre :**Test
 **Interprète original :**
 **Écouter :** [version originale](https://...)
 
@@ -31,7 +30,6 @@ prompts:
 **Paroles**
 
 <div class="paroles">
-
 (remplace cette ligne par les paroles)
 
 </div>
