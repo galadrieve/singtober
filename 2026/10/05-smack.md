@@ -25,7 +25,7 @@ prompts:
 <div class="commentaires">
 
 Alors non, je fais toujours pas de voix saturée, mais un jour, un jour 🤞!
-En attendant, c'était rigolo de changer d'ambiance !
+On est vraiment dans le cas du "30 min c'est 30 min", sinon j'aurais jamais publié ça !
 
 </div>
 
@@ -41,8 +41,5 @@ What in God's name have you done?
 Stick your arm for some real fun
 So your sickness weighs a ton
 And God's name is smack for some
-
-Yeah!
-
 
 </div>
