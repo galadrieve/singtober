@@ -31,6 +31,7 @@ Alors autant dire qu'on change d'univers... J'étais pas prête, peut-être que 
 **Paroles**
 
 <div class="paroles">
+
 Je suis l’ogre sur le toit
 Qui attend je ne sais quoi
 En carafe sur le toit
@@ -48,4 +49,5 @@ Je suis l’ogre sur le toit
 Un amateur de sanguines
 Je croque les orphelines
 Les princesses au petit pois
+
 </div>

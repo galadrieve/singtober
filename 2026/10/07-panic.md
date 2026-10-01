@@ -4,6 +4,7 @@ date: 2026-10-07
 is_draft: true
 prompts:
   - title: Panic
+    original_prompt: Panic
     date: 2026-10-07
 ---
 
@@ -11,7 +12,7 @@ prompts:
 
 <div class="infos">
 
-**Titre :**Sweet Transvestite from the RHPS
+**Titre :** Sweet Transvestite from the RHPS
 **Interprète original :** Tim Curry (RIP)
 **Écouter :** [version originale](https://www.youtube.com/watch?v=JWoYy4Ah81s&list=RDJWoYy4Ah81s&start_radio=1)
 
@@ -22,13 +23,16 @@ prompts:
 **Commentaires**
 
 <div class="commentaires">
+
 Bon déjà, impossible de ne pas rendre hommage à Tim Curry qui nous a quitté cette année.
 Et sinon... J'ai vraiment hésité à la faire en entier, mais finalement, allez voir le film au Studio Galande, c'est encore mieux !
+
 </div>
 
 **Paroles**
 
 <div class="paroles">
+
 Well you got caught with a flat? Well,
 how 'bout that
 Well babies, don't you panic
