@@ -4,15 +4,15 @@ full_title: 08 - Puant
 is_draft: true
 prompts:
 - date: 2026-10-08
-  title: Puant
   original_prompt: Stinky
+  title: Puant
 ---
 
 ![Puant](/singtober/static/singto2026/pics/20261008.png)
 
 <div class="infos">
 
-**Titre :** Test
+**Titre :**
 **Interprète original :**
 **Écouter :** [version originale](https://...)
 
