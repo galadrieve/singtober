@@ -4,6 +4,7 @@ date: 2026-10-05
 is_draft: true
 prompts:
   - title: Smack
+    original_prompt: Smack
     date: 2026-10-05
 ---
 
