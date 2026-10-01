@@ -24,7 +24,7 @@ prompts:
 
 <div class="commentaires">
 
-Ok ok, c'était facile, mais il était temps de faire quelque chose en français non ? 
+Ok ok, c'était facile, mais il était temps de faire quelque chose en français non ?
 
 </div>
 
