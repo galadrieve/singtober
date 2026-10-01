@@ -29,6 +29,15 @@ repos:
         types: [markdown]
         language: python
 
+      # Répare les erreurs fréquentes après une modification dans l'admin :
+      # lignes vides autour des blocs, espace après les libellés en gras,
+      # original_prompt perdu. Voir .github/fix-entries.
+      - id: fix-entries
+        name: Fix Singtober entries
+        entry: .github/fix-entries
+        files: ^[0-9]{4}/[0-9]{2}/.*\.md$
+        language: script
+
       # The update-from-config hook isn't shipped in the template; it is added
       # by `update-from-config --init` so it can't run against a repo that init
       # hasn't configured yet.

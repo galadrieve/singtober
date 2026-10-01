@@ -1,0 +1,75 @@
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.14"
+# ///
+"""
+Repair the small mistakes that editing entries in the CMS tends to introduce:
+
+- the blank lines around the Singtober blocks (<div class="infos|commentaires|paroles">
+  and their </div>) get lost, which glues the first lines together;
+- a space is missing after a bold label such as "**Titre :**", which breaks the bold;
+- the CMS drops `original_prompt`, so the engine falls back to the lowercase word from
+  the filename and the calendar shows it twice ("smack Smack").
+
+Exits with 1 when a file was modified, as pre-commit hooks do.
+"""
+
+import pathlib
+import re
+import sys
+
+BLOCK_OPEN = re.compile(r'^<div class="(infos|commentaires|paroles)">$')
+BOLD_LABEL = re.compile(r"^(\*\*[^*\n]+ :\*\*)(?=\S)", re.MULTILINE)
+
+
+def fix_blank_lines(lines: list[str]) -> list[str]:
+    fixed: list[str] = []
+    for line in lines:
+        after_open = fixed and BLOCK_OPEN.match(fixed[-1]) and line != ""
+        before_close = fixed and fixed[-1] != "" and line == "</div>"
+        if after_open or before_close:
+            fixed.append("")
+        fixed.append(line)
+    return fixed
+
+
+def fix_original_prompt(front_matter: list[str], stem: str) -> list[str]:
+    if any(line.strip().startswith("original_prompt:") for line in front_matter):
+        return front_matter
+    title_lines = [
+        i
+        for i, line in enumerate(front_matter)
+        if re.match(r"^\s*(- )?title: ", line)
+    ]
+    words = [part for part in stem.split("-") if not part.isdigit()]
+    if len(title_lines) != 1 or len(words) != 1:
+        return front_matter
+    index = title_lines[0]
+    column = front_matter[index].index("title:")
+    line = " " * column + f"original_prompt: {words[0].capitalize()}"
+    return front_matter[: index + 1] + [line] + front_matter[index + 1 :]
+
+
+def fix_file(path: pathlib.Path) -> bool:
+    text = path.read_text(encoding="utf-8")
+    lines = text.split("\n")
+    if lines[0] != "---" or "---" not in lines[1:]:
+        return False
+    end = lines.index("---", 1)
+    front_matter = fix_original_prompt(lines[1:end], path.stem)
+    body = BOLD_LABEL.sub(r"\1 ", "\n".join(fix_blank_lines(lines[end + 1 :])))
+    new_text = "\n".join(["---", *front_matter, "---"]) + "\n" + body
+    if new_text == text:
+        return False
+    path.write_text(new_text, encoding="utf-8", newline="\n")
+    print(f"Fixed {path}")
+    return True
+
+
+def main() -> int:
+    changed = [fix_file(pathlib.Path(arg)) for arg in sys.argv[1:]]
+    return 1 if any(changed) else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
