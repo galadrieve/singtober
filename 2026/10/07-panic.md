@@ -22,23 +22,23 @@ prompts:
 **Commentaires**
 
 <div class="commentaires">
-Bon déjà, impossible de ne pas rendre hommage à Tim Curry qui nous a quitté cette année. 
+Bon déjà, impossible de ne pas rendre hommage à Tim Curry qui nous a quitté cette année.
 Et sinon... J'ai vraiment hésité à la faire en entier, mais finalement, allez voir le film au Studio Galande, c'est encore mieux !
 </div>
 
 **Paroles**
 
 <div class="paroles">
-Well you got caught with a flat? Well, 
+Well you got caught with a flat? Well,
 how 'bout that
 Well babies, don't you panic
-By the light of the night, 
+By the light of the night,
 it'll all seem alright
-I'll get you a Satanic 
+I'll get you a Satanic
 Mechanic
 
 I'm just a sweet transvestite
-From Transexual, 
+From Transexual,
 Transylvania
 
 </div>
