@@ -1,20 +1,20 @@
 ---
-date: 2026-10-03
 full_title: 03 - Miniature
+date: 2026-10-03
 is_draft: true
 prompts:
-- date: 2026-10-03
-  original_prompt: Miniature
-  title: Miniature
+  - title: Miniature
+    original_prompt: Miniature
+    date: 2026-10-03
 ---
 
 ![Miniature](/singtober/static/singto2026/pics/20261003.png)
 
 <div class="infos">
 
-**Titre :**
-**Interprète original :**
-**Écouter :** [version originale](https://...)
+**Titre :** Miniature Disasters
+**Interprète original :** KT Tunstall
+**Écouter :** [version originale](https://www.youtube.com/watch?v=_OnmpAhzu2c)
 
 </div>
 
@@ -24,7 +24,7 @@ prompts:
 
 <div class="commentaires">
 
-(remplace cette ligne par tes commentaires)
+Pas grand chose à dire, j'avoue être tombée en panne d'inspiration sur celle-là, du coup 1- ça permet de faire du twang (j'ai a priori pas trouvé de lien intéressant pour vous décrire ce que c'est) et 2- j'ai fait les chœurs (mais une seule voix)
 
 </div>
 
@@ -32,6 +32,10 @@ prompts:
 
 <div class="paroles">
 
-(remplace cette ligne par les paroles)
+Miniature disasters and minor catastrophes
+Bring me to my knees
+Well I must be my own master
+Or a miniature disaster will be
+It will be the death of me
 
 </div>
