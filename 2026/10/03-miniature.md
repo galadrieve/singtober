@@ -1,7 +1,7 @@
 ---
 full_title: 03 - Miniature
 date: 2026-10-03
-is_draft: true
+is_draft: false
 prompts:
   - title: Miniature
     original_prompt: Miniature
