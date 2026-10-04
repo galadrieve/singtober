@@ -1,7 +1,7 @@
 ---
 full_title: 06 - Ogre
 date: 2026-10-06
-is_draft: true
+is_draft: false
 prompts:
   - title: Ogre
     original_prompt: Ogre
@@ -24,7 +24,7 @@ prompts:
 
 <div class="commentaires">
 
-Alors autant dire qu'on change d'univers... J'étais pas prête, peut-être que vous non plus, mais pourquoi pas !
+Alors autant dire qu'on change d'univers... On est vraiment, vraiment pas loin de l'[ASMR](https://fr.wikipedia.org/wiki/Autonomous_sensory_meridian_response), j'étais pas prête, peut-être que vous non plus, mais pourquoi pas ! C'est un peu flippant non ?
 
 </div>
 
