@@ -12,8 +12,8 @@ prompts:
 
 <div class="infos">
 
-**Titre :** Sweet Transvestite from the RHPS
-**Interprète original :** Tim Curry (RIP)
+**Titre :** Sweet Transvestite (Rocky Horror Picture Show)
+**As made famous by :** Tim Curry (RIP)
 **Écouter :** [version originale](https://www.youtube.com/watch?v=JWoYy4Ah81s&list=RDJWoYy4Ah81s&start_radio=1)
 
 </div>
@@ -24,7 +24,7 @@ prompts:
 
 <div class="commentaires">
 
-Bon déjà, impossible de ne pas rendre hommage à Tim Curry qui nous a quitté cette année.
+Bon déjà, impossible de ne pas rendre hommage à [Tim Curry](https://fr.wikipedia.org/wiki/Tim_Curry) qui nous a quitté cette année. Il est une icône de beaucoup de trop de chose, à commencer par tout ce qui peut être queer, dans tous les sens du terme.
 Et sinon... J'ai vraiment hésité à la faire en entier, mais finalement, allez voir le film au Studio Galande, c'est encore mieux !
 
 </div>
