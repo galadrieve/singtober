@@ -1,7 +1,7 @@
 ---
 full_title: 05 - Smack
 date: 2026-10-05
-is_draft: true
+is_draft: false
 prompts:
   - title: Smack
     original_prompt: Smack
@@ -24,8 +24,8 @@ prompts:
 
 <div class="commentaires">
 
-Alors non, je fais toujours pas de voix saturée, mais un jour, un jour 🤞!
-On est vraiment dans le cas du "30 min c'est 30 min", sinon j'aurais jamais publié ça !
+Alors non, je fais toujours pas de voix saturée, mais un jour, un jour 🤞! (si vous connaissez unE prof qui casse pas ses élèves, je prends !)
+On est vraiment dans le cas du "30 min c'est 30 min", sinon j'aurais jamais publié ça, mais j'ai pu prendre le temps de faire l'effet deux pistes par tronçon. Jour 5, on est toujours là ! 🎉
 
 </div>
 
