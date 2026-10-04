@@ -1,7 +1,7 @@
 ---
 full_title: 07 - Panic
 date: 2026-10-07
-is_draft: true
+is_draft: false
 prompts:
   - title: Panic
     original_prompt: Panic
@@ -24,9 +24,10 @@ prompts:
 
 <div class="commentaires">
 
-Bon déjà, impossible de ne pas rendre hommage à [Tim Curry](https://fr.wikipedia.org/wiki/Tim_Curry) qui nous a quitté cette année. Il est une icône de beaucoup de trop de chose, à commencer par tout ce qui peut être queer, dans tous les sens du terme.
+Bon déjà, impossible de ne pas rendre hommage à [Tim Curry](https://fr.wikipedia.org/wiki/Tim_Curry) qui nous a quittés cette année. Il est une icône de beaucoup de trop de choses, à commencer par tout ce qui peut être queer, dans tous les sens du terme.
 Et sinon... J'ai vraiment hésité à la faire en entier, mais finalement, allez voir le film au Studio Galande, c'est encore mieux !
 _Edit : finalement à défaut de tout faire, je suis allée au bout de la chanson_ 😅
+_Et avec un petit défi pour rigoler (lolilol) : enregistrement réalisé en une seule prise complète. Seuls edits : les niveaux._
 
 </div>
 
